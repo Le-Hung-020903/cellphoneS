@@ -13,6 +13,7 @@ const {
   DB_HOST_PRODUCTION,
   DB_PORT_PRODUCTION,
 } = process.env;
+const pg = require("pg");
 
 module.exports = {
   development: {
@@ -39,4 +40,5 @@ module.exports = {
     dialect: DB_DRIVER_PRODUCTION,
     port: DB_PORT_PRODUCTION,
   },
+  dialectModule: pg,
 };
