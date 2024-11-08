@@ -38,6 +38,9 @@ const getProducts = async () => {
 const PageHome = async () => {
   const categories = await getCategory();
   const products = await getProducts();
+
+  console.log({ categories, products });
+
   const listImages = [
     {
       id: 1,

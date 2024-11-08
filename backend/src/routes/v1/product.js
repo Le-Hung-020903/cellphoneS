@@ -4,12 +4,7 @@ const productController = require("../../controllers/api/v1/products/product/pro
 const authMiddleware = require("../../middlewares/api/auth.middleware");
 const permission = require("../../middlewares/api/permission.middleware");
 
-router.get(
-  "/v1/products",
-  authMiddleware,
-  permission("products.read"),
-  productController.index
-);
+router.get("/v1/products", productController.index);
 router.post(
   "/v1/products",
   authMiddleware,

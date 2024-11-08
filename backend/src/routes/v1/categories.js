@@ -6,8 +6,7 @@ const authMiddleware = require("../../middlewares/api/auth.middleware");
 
 router.get(
   "/v1/categories",
-  authMiddleware,
-  permissions("categories.read"),
+
   categories.index
 );
 
