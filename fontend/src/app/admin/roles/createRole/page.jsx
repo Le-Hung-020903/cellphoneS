@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import useSWR, { mutate } from "swr";
 import { useProfile } from "../../profileContext";
 
-const createRole = () => {
+const CreateRole = () => {
   const { profile } = useProfile();
   const [name, setName] = useState("");
   const [permissions, setPermissions] = useState([]);
@@ -172,4 +172,4 @@ const createRole = () => {
   );
 };
 
-export default createRole;
+export default CreateRole;
