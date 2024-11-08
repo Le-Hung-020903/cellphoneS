@@ -13,7 +13,7 @@ import toast from "react-hot-toast";
 const PagePayment = () => {
   const pathname = usePathname();
   const dispatch = useDispatch();
-  const api = `http://localhost:3000/api/v1/order`;
+  const api = `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/order`;
   const [isOpenPayment, setIsOpenPayment] = useState(false);
   const paymentInfo = useSelector((state) => state.getLocation.recipient_info);
   const total = useSelector((state) => state.getCart.price);

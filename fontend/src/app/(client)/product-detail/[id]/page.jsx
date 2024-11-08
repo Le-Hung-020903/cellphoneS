@@ -16,7 +16,7 @@ import { formatMoney } from "../../../Utils/formatMoney";
 
 const getSimilarProduct = async (id) => {
   const similarProducts = await fetch(
-    `http://localhost:3000/api/v1/products/similar/${id}`,
+    `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/products/similar/${id}`,
     {
       next: { tags: ["similarProducts"] },
     }
@@ -26,9 +26,12 @@ const getSimilarProduct = async (id) => {
 };
 
 const getProductDetail = async (id) => {
-  const product = await fetch(`http://localhost:3000/api/v1/products/${id}`, {
-    next: { tags: ["productDetail"] },
-  });
+  const product = await fetch(
+    `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/products/${id}`,
+    {
+      next: { tags: ["productDetail"] },
+    }
+  );
   revalidateProductDetail();
   return product.json();
 };

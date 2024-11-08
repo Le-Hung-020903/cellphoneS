@@ -14,7 +14,9 @@ const UpdateCategories = (props) => {
   const [value, setValue] = useState(0);
   const [device, setDevice] = useState("");
   const [desc, setDesc] = useState("");
-  const apiUpdateCategories = `http://localhost:3000/api/v1/categories`;
+  const apiUpdateCategories = `${
+    import.meta.env.NEXT_PUBLIC_API_URL
+  }/api/v1/categories`;
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

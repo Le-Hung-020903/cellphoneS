@@ -24,7 +24,7 @@ const PageCategories = () => {
       credentials: "include",
     }).then((res) => res.json());
   const apiGetCategories = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/categories`;
-  // const apiCountQuantity = `http://localhost:3000/api/v1/categories/0/products/count`;
+  // const apiCountQuantity = `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/categories/0/products/count`;
   const handleDelete = async (e, id, name) => {
     e.preventDefault();
     try {
@@ -59,7 +59,7 @@ const PageCategories = () => {
   // useEffect(() => {
   //   const countQuantity = async (id) => {
   //     const response = await fetch(
-  //       `http://localhost:3000/api/v1/categories/${id}/products/count`
+  //       `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/categories/${id}/products/count`
   //     );
   //     if (response.ok) {
   //       const data = await response.json();

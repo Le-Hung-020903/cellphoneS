@@ -16,7 +16,7 @@ const FlashSale = dynamic(() => import("../components/flash_sale"), {
 
 const getCategory = async () => {
   const rootCategories = await fetch(
-    `http://localhost:3000/api/v1/categories`,
+    `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/categories`,
     {
       next: { tags: ["categories"] },
     }
@@ -25,9 +25,12 @@ const getCategory = async () => {
 };
 
 const getProducts = async () => {
-  const products = await fetch(`http://localhost:3000/api/v1/products`, {
-    next: { tags: ["products"] },
-  });
+  const products = await fetch(
+    `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/products`,
+    {
+      next: { tags: ["products"] },
+    }
+  );
   revalidateProductsDevice();
   return products.json();
 };

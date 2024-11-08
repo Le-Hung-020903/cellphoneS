@@ -17,17 +17,20 @@ const PageLogin = () => {
       },
       validationSchema: loginSchema,
       onSubmit: async ({ email, password }) => {
-        await fetch("http://localhost:3000/api/v1/auth/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email,
-            password,
-          }),
-          credentials: "include",
-        })
+        await fetch(
+          `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/auth/login`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email,
+              password,
+            }),
+            credentials: "include",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.status === 200) {

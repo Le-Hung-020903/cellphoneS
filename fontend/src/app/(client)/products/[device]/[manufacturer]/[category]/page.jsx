@@ -15,7 +15,9 @@ const getProductOfCategory = async (category, options) => {
     key += `&dir=${options.dir}`;
   }
   const products = await fetch(
-    `http://localhost:3000/api/v1/products/device/manufacturers/category/${category}/${key}`,
+    `${
+      import.meta.env.NEXT_PUBLIC_API_URL
+    }/api/v1/products/device/manufacturers/category/${category}/${key}`,
     {
       next: { tags: ["productCategory"] },
     }

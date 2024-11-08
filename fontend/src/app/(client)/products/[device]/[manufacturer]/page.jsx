@@ -15,7 +15,9 @@ const getManufacturers = async (manufacture, options) => {
     query += `&dir=${options.dir}`;
   }
   const manufacturers = await fetch(
-    `http://localhost:3000/api/v1/products/manufacturers/${manufacture}/${query}`,
+    `${
+      import.meta.env.NEXT_PUBLIC_API_URL
+    }/api/v1/products/manufacturers/${manufacture}/${query}`,
     {
       next: { tags: ["productManufacturer"] },
     }
