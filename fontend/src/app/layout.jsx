@@ -1,11 +1,9 @@
-import { Inter } from "next/font/google";
 // import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Toaster } from "react-hot-toast";
 import BootstrapProvider from "./providers/bootstrapProvider";
 import Providers from "../redux/provider";
 import Header from "./components/header";
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
