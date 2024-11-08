@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 export const getCartProducts = createAsyncThunk("getCartProducts", async () => {
   const response = await fetch(
-    `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/cart`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/cart`,
     {
       credentials: "include",
     }

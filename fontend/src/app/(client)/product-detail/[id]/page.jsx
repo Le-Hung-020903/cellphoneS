@@ -16,7 +16,7 @@ import { formatMoney } from "../../../Utils/formatMoney";
 
 const getSimilarProduct = async (id) => {
   const similarProducts = await fetch(
-    `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/products/similar/${id}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/products/similar/${id}`,
     {
       next: { tags: ["similarProducts"] },
     }
@@ -27,7 +27,7 @@ const getSimilarProduct = async (id) => {
 
 const getProductDetail = async (id) => {
   const product = await fetch(
-    `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/products/${id}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/products/${id}`,
     {
       next: { tags: ["productDetail"] },
     }

@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 export const getLatestOrder = createAsyncThunk("getLatestOrder", async () => {
   const response = await fetch(
-    `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/order`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/order`,
     {
       credentials: "include",
     }

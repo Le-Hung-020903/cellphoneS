@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 export const deleteCart = createAsyncThunk("deleteCart", async ({ id }) => {
   const response = await fetch(
-    `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/cart/${id}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/cart/${id}`,
     {
       method: "DELETE",
       credentials: "include",

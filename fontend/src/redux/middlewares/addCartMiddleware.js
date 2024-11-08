@@ -3,7 +3,7 @@ export const addCartProducts = createAsyncThunk(
   "addCartProducts",
   async ({ product_id, quantity }) => {
     const response = await fetch(
-      `${import.meta.env.NEXT_PUBLIC_API_URL}/api/v1/cart`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/v1/cart`,
       {
         method: "POST",
         headers: {

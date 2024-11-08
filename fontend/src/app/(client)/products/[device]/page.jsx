@@ -23,9 +23,7 @@ const getProducts = async (device, options) => {
   }
 
   const products = await fetch(
-    `${
-      import.meta.env.NEXT_PUBLIC_API_URL
-    }/api/v1/products/device/${device}${query}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/products/device/${device}${query}`,
     {
       next: { tags: ["productDevice"] },
     }

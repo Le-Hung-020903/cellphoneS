@@ -87,9 +87,7 @@ const PageEditProduct = (props) => {
     if (confirm("Bạn có chắc chắn xoá ảnh này không ?")) {
       try {
         const res = await fetch(
-          `${
-            import.meta.env.NEXT_PUBLIC_API_URL
-          }/api/v1/products/${productId}/images/${id}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/v1/products/${productId}/images/${id}`,
           {
             method: "DELETE",
           }
