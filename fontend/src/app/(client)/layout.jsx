@@ -12,11 +12,11 @@ const ClientLayout = ({ children }) => {
   }, [dispatch]);
 
   return (
-    <div>
+    <>
       <Header />
       {children}
       <Footer />
-    </div>
+    </>
   );
 };
 
