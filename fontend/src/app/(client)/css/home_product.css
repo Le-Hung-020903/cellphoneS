@@ -1,0 +1,49 @@
+.col-custom {
+  flex: 0 0 20%; /* Mỗi cột sẽ chiếm 20% chiều rộng của hàng */
+  max-width: 20%;
+}
+.favorite-product {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.product-item:hover {
+  cursor: pointer;
+}
+.product-img {
+  /* height: 200px; */
+}
+.product-img img {
+  transition: transform 0.3s;
+}
+.product-img img:hover {
+  transform: scale(1.1);
+}
+.product-favorite span {
+  font-size: 15px;
+}
+.product-quality svg {
+  color: yellow;
+  font-size: 20px;
+}
+.product-heart svg {
+  cursor: pointer;
+  font-size: 22px;
+  color: red;
+}
+.product-heart-icon {
+  transition: transform 0.3s ease;
+}
+.product-heart-icon:hover {
+  animation: pulse 0.6s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Kích thước ban đầu */
+  }
+  50% {
+    transform: scale(1.2); /* Phóng to */
+  }
+  100% {
+    transform: scale(1); /* Thu nhỏ về kích thước ban đầu */
+  }
+}

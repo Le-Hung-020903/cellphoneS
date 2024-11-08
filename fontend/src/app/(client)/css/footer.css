@@ -1,0 +1,42 @@
+.footer h4 {
+  font-size: 16px;
+  color: red;
+}
+.footer .footer-link,
+.footer .footer-social_link {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+.footer .footer-link:hover,
+.footer .footer-social_link:hover {
+  color: red;
+}
+.footer .footer-item,
+.footer .footer-social {
+  padding: 3px 0;
+  display: block;
+}
+.footer .footer-link {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer-link .footer-hotline {
+  margin-left: auto;
+}
+.footer .footer-strong {
+  font-weight: 500;
+}
+
+.footer .footer-hotline {
+  color: #3680ed;
+  font-weight: 500;
+  margin-right: auto;
+}
+.footer .footer-social__link svg {
+  width: 40px;
+  height: 40px;
+}
+.footer .copyright {
+  border: 1px solid #be1e2d;
+}

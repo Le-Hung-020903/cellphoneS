@@ -1,0 +1,16 @@
+.filter-product-wrapper button div {
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: #444;
+}
+.filter-product-wrapper button.active div {
+  border: 1px solid #d70018;
+  border-radius: 10px;
+  color: #d70018;
+  background-color: #fef2f2 !important;
+}
+.filter-product-wrapper .row svg {
+  width: 20px;
+  height: 20px;
+}

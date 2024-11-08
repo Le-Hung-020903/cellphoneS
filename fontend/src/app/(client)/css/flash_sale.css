@@ -1,0 +1,4 @@
+.col-custom {
+  flex: 0 0 20%; /* Mỗi cột sẽ chiếm 20% chiều rộng của hàng */
+  max-width: 20%;
+}

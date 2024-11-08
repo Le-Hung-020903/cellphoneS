@@ -1,0 +1,6 @@
+.header-item:hover {
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #df3346;
+  background-color: #df3346;
+}

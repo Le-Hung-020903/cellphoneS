@@ -1,0 +1,68 @@
+.product-action svg {
+  font-size: 10px !important;
+}
+.payment-item:not(:first-child) {
+  margin-top: 10px; /* Tương đương với class mt-3 */
+  border-top: 1px solid #dee2e6; /* Tương đương với class border-top */
+  padding-top: 10px;
+}
+form + p {
+  margin-top: 10px;
+  color: #919eab;
+  font-size: 10.5px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 9px;
+  text-align: left;
+}
+.payment-input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}
+.payment-input:focus {
+  border: 0;
+  border-bottom: 2px solid #1e4bc9;
+  transition: 0.2s;
+}
+.payment-info-item.active {
+  color: #d70018 !important;
+  border-bottom: 3px solid #d70018 !important;
+}
+.overlay {
+  position: fixed; /* Overlay phủ toàn màn hình */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt */
+  z-index: 1; /* Đặt overlay bên dưới modal */
+}
+.payment-options button.active {
+  background-color: #d70018 !important;
+  color: #fff !important;
+  cursor: pointer !important;
+}
+.payment-option-item {
+  user-select: none;
+  border: 1px solid rgba(145, 158, 171, 0.239);
+  border-radius: 15px;
+  transition: 1s ease;
+}
+
+.payment-option-item:hover {
+  background-color: #ffdada;
+}
+
+.payment-option-item.active {
+  border-color: rgb(255, 40, 64);
+}
+.order-success-item:nth-child(1) {
+  padding-bottom: 15px;
+}
+.order-success-item:nth-child(n + 2) {
+  border-top: 1px solid rgba(145, 158, 171, 0.239);
+  padding-top: 15px;
+}

@@ -1,0 +1,264 @@
+.nav-item {
+  margin: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+.nav-item.active {
+  border: 1px solid #e11b1e;
+  border-radius: 10px;
+  background-color: #fee;
+}
+.nav-item.active a {
+  color: #e11b1e;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #686868;
+  font-size: 18px;
+}
+.smember-navigation-icon {
+  background-color: rgba(24, 119, 242, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.history-product-item:not(:first-child) {
+  margin-top: 20px;
+}
+.history-item p {
+  background-color: #fff;
+  border: 1px solid #eaedef;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 9px 15px;
+}
+.history-item.history-item-active p {
+  background-color: #d70018;
+  color: #fff;
+}
+.history-status {
+  border-radius: 3px;
+  font-size: 12px;
+  margin: 5px 0;
+  padding: 4px 10px;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.history-btn {
+  background: transparent;
+  border-radius: 3px;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: 0 0 0 0.5px #e0052b;
+  color: #e0052b;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 3px 10px;
+  position: relative;
+  white-space: nowrap;
+}
+.order-detail-item:not(:first-child) {
+  border-top: 1px solid rgb(229, 229, 229);
+}
+
+/*------------ product reviews -------------*/
+/* Overlay phủ toàn màn hình */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.order-detail-reviews {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, -20px);
+  width: 670px;
+  height: calc(100vh - 80px);
+  background-color: #fff;
+  border-radius: 8px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+/* Khi modal được mở */
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.order-detail-reviews.active {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.review-star-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+}
+.review-star-item span {
+  font-size: 20px;
+  cursor: pointer;
+}
+.review-star-item.is-active span {
+  color: #ffbf00 !important;
+}
+.review-content textarea:focus {
+  border-color: #485fc7;
+  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
+}
+
+/*------------ account -------------*/
+
+.user-info-input-item {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 10px 0;
+}
+.user-info-input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 10px 0;
+}
+.user-info-input-item:focus {
+  border-bottom-color: #d70018;
+}
+.user-info-input-item:focus::placeholder {
+  visibility: hidden;
+}
+
+.user-info-label {
+  position: absolute;
+  top: 30%;
+  left: 10px; /* Canh lề trái */
+  transform: translateY(-50%); /* Giữ label ở giữa theo chiều dọc */
+  transition: all 0.4s ease; /* Hiệu ứng chuyển động */
+  font-size: 16px; /* Kích thước lớn hơn khi không focus */
+  color: #d70018;
+  opacity: 0; /* Mặc định ẩn label */
+  visibility: hidden;
+}
+
+/* Khi input được focus, label trượt lên và thu nhỏ lại */
+.user-info-input-item:focus + .user-info-label,
+.user-info-input-item:not(:placeholder-shown) + .user-info-label {
+  display: inline !important;
+  top: -6px;
+  left: 0;
+  font-size: 14px;
+  color: #d70018;
+  opacity: 1; /* Hiển thị label */
+  visibility: visible;
+}
+
+/*------------ change password -------------*/
+
+.change-password-input {
+  width: 100%;
+  padding: 17px 14px 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.change-password-input:focus {
+  border-bottom-color: #d70018;
+}
+
+/* Định dạng và thiết lập vị trí cho span */
+.change-password-input + span {
+  position: absolute;
+  left: 17px;
+  top: 40%;
+  transform: translateY(-40%);
+  font-size: 14px;
+  color: #aaa;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  opacity: 0; /* Ẩn span mặc định */
+}
+
+/* Di chuyển placeholder lên trên khi focus */
+.change-password-input:focus::placeholder {
+  transform: translateY(-23px);
+  font-size: 14px;
+  color: #d70018;
+  transition: all 0.3s ease;
+}
+
+/* Khi có nội dung trong input, ẩn placeholder và hiển thị span */
+.change-password-input:not(:placeholder-shown)::placeholder {
+  color: transparent; /* Ẩn placeholder hoàn toàn */
+}
+
+.change-password-input:not(:placeholder-shown) + span {
+  top: -1px;
+  font-size: 14px;
+  color: #d70018;
+  opacity: 1; /* Hiển thị span */
+}
+/*------------ Support -------------*/
+.support-item {
+  border: 1px solid #bababa;
+  padding: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.support-item-link {
+  text-decoration: none;
+  color: #fd2424;
+  display: inline-block;
+  margin-top: 10px;
+}
+/*------------ model-logout -------------*/
+.model-logout {
+  position: fixed;
+  background-color: #fff;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 170px;
+  border-radius: 15px;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: 10;
+}
+.model-logout.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.model-logout-button {
+  width: 100%;
+  background-color: #e7e7e7;
+  padding: 10px;
+  border-radius: 5px;
+}
