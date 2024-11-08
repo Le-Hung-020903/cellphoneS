@@ -21,7 +21,7 @@ const reviewRouter = require("./routes/v1/review");
 var app = express();
 app.use(
   cors({
-    origin: "http://localhost:8080",
+    origin: process.env.CLIENT_URL,
     credentials: true,
   })
 );
